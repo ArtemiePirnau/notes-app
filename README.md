@@ -6,6 +6,8 @@ The note element has the text you entered and the name, and the exact date and t
 First of all install all npm packages with the command:
 ```
 npm i
+# or
+npm install
 ```
 # Getting Started
 First, run the development server with the command: 
