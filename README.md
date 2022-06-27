@@ -1,5 +1,5 @@
 # Description
-Music Player - a simple application in which you can add notes
+Notes App - a simple application in which you can add notes
 
 The note element has the text you entered and the name, and the exact date and time you created the note. You can delete the note from the whole list.
 # Installation
