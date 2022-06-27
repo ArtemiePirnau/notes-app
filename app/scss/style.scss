@@ -1,0 +1,142 @@
+@import "global";
+.header {
+  margin-bottom: 70px;
+  &__inner {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 42px;
+    font-weight: 700;
+  }
+  &__add {
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background-color: #2c00ff;
+    padding: 8px 20px 8px 20px;
+    color: #fff;
+    border-radius: 5px;
+  }
+}
+.menu {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &__item {
+    max-width: 300px;
+    border: 1px solid #f0f0f0;
+    padding: 20px 0px 10px 25px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  &__item.delete {
+    display: none !important;
+  }
+  &__item-top {
+    margin-bottom: 20px;
+  }
+  &__item-name {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+  }
+  &__item-text {
+    line-height: 28px;
+  }
+  &__item-img {
+    cursor: pointer;
+  }
+  &__item-trash {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #2c00ff;
+  }
+}
+.modal {
+  z-index: 3;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transform: translateY(-500%);
+  background-color: #f0f0f0;
+  padding: 10px 24px 0px 25px;
+  transition: all 0.3s ease-in-out;
+  &.show {
+    transform: translateY(calc(100% - 500px));
+  }
+  &__hide {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  &__form-add {
+    cursor: pointer;
+    border: none;
+    background-color: #2c00ff;
+    color: #fff;
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  input {
+    display: block;
+    margin-bottom: 50px;
+    padding: 5px 0px 6px 10px;
+    font-size: 20px;
+    width: 100%;
+  }
+}
+@media (max-width: 636px) {
+  .menu {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
+    &__item {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .modal {
+    width: 100%;
+    height: 400px;
+    &.show {
+      transform: translateY(calc(100% - 400px));
+    }
+  }
+}
+@media (max-width: 400px) {
+  .header__add {
+    font-size: 18px;
+  }
+  .header__logo {
+    font-size: 32px;
+  }
+  .modal input {
+    font-size: 18px;
+  }
+}
