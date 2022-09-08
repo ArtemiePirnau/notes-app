@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/92051961/189174831-dfae486a-8e9a-4c6d-87a3-e6902fe9a351.png)
+
 # Description
 Notes App - a simple application in which you can add notes
 
